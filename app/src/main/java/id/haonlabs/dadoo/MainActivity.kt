@@ -46,13 +46,13 @@ fun MainApp(modifier: Modifier) {
       horizontalAlignment = Alignment.CenterHorizontally,
       modifier = modifier.fillMaxSize()) {
         when (dice) {
-          1 -> Image(painter = painterResource(R.drawable.dice_1), contentDescription = "Dice")
-          2 -> Image(painter = painterResource(R.drawable.dice_2), contentDescription = "Dice")
-          3 -> Image(painter = painterResource(R.drawable.dice_3), contentDescription = "Dice")
-          4 -> Image(painter = painterResource(R.drawable.dice_4), contentDescription = "Dice")
-          5 -> Image(painter = painterResource(R.drawable.dice_5), contentDescription = "Dice")
-          6 -> Image(painter = painterResource(R.drawable.dice_6), contentDescription = "Dice")
-          else -> Image(painter = painterResource(R.drawable.dice_1), contentDescription = "Dice")
+          1 -> Image(painter = painterResource(R.drawable.dice_1), contentDescription = "Dice 1")
+          2 -> Image(painter = painterResource(R.drawable.dice_2), contentDescription = "Dice 2")
+          3 -> Image(painter = painterResource(R.drawable.dice_3), contentDescription = "Dice 3")
+          4 -> Image(painter = painterResource(R.drawable.dice_4), contentDescription = "Dice 4")
+          5 -> Image(painter = painterResource(R.drawable.dice_5), contentDescription = "Dice 5")
+          6 -> Image(painter = painterResource(R.drawable.dice_6), contentDescription = "Dice 5")
+          else -> Image(painter = painterResource(R.drawable.dice_1), contentDescription = "Dice 1")
         }
         Button(modifier = modifier.padding(top = 40.dp), onClick = { dice = (1..6).random() }) {
           Text(text = "Roll")
