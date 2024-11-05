@@ -21,6 +21,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import id.haonlabs.dadoo.ui.theme.DadooTheme
 
 class MainActivity : ComponentActivity() {
@@ -53,7 +54,9 @@ fun MainApp(modifier: Modifier) {
           6 -> Image(painter = painterResource(R.drawable.dice_6), contentDescription = "Dice")
           else -> Image(painter = painterResource(R.drawable.dice_1), contentDescription = "Dice")
         }
-        Button(onClick = { dice = (1..6).random() }) { Text(text = "Roll") }
+        Button(modifier = modifier.padding(top = 40.dp), onClick = { dice = (1..6).random() }) {
+          Text(text = "Roll")
+        }
       }
 }
 
